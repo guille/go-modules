@@ -52,6 +52,18 @@
       font-size: 0.9em;
     }
 
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .badge {
+      display: flex;
+      flex: none;
+    }
+
     .desc {
       font-size: 0.9rem;
       color: #666;
@@ -79,11 +91,23 @@
   <ul>
 
     <li>
-      <code>go.guillerg.dev/orbit</code>
+      <div class="row">
+        <code>go.guillerg.dev/orbit</code>
+        <a class="badge" href="https://pkg.go.dev/go.guillerg.dev/orbit" target="_blank" rel="noopener">
+          <img src="https://pkg.go.dev/badge/go.guillerg.dev/orbit.svg" alt="Go reference for go.guillerg.dev/orbit"
+            width="90" height="20" />
+        </a>
+      </div>
       <div class="desc">A declarative CLI tool to manage tasks and reminders, using systemd as its back-end.</div>
     </li>
     <li>
-      <code>go.guillerg.dev/rss-builder</code>
+      <div class="row">
+        <code>go.guillerg.dev/rss-builder</code>
+        <a class="badge" href="https://pkg.go.dev/go.guillerg.dev/rss-builder" target="_blank" rel="noopener">
+          <img src="https://pkg.go.dev/badge/go.guillerg.dev/rss-builder.svg"
+            alt="Go reference for go.guillerg.dev/rss-builder" width="90" height="20" />
+        </a>
+      </div>
       <div class="desc">Generates RSS feeds for sites that don't offer them.</div>
     </li>
 
