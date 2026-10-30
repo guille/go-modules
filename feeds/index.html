@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="go-import" content="go.guillerg.dev/feeds git https://github.com/guille/feeds">
+  <title>feedsd · go.guillerg.dev</title>
+  <style>
+    body {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      color: #555;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #888;
+      margin: 2rem 0 0.75rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem;
+    }
+
+    li {
+      border-top: 1px solid #eee;
+      padding: 0.75rem 0;
+      color: #555;
+    }
+
+    li:last-child {
+      border-bottom: 1px solid #eee;
+    }
+
+    code {
+      font-size: 0.9em;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>feeds</h1>
+  <p>
+    That's my personal self-hosted feed reader. If you found
+    <code>feedsd/&lt;version&gt; (+https://go.guillerg.dev/feeds)</code>
+    in your access logs, I probably follow your feed.
+  </p>
+
+  <h2>How it works</h2>
+  <p>I aim for <code>feeds</code> to adhere to best practices (conditional GETs, one request at a time per host, etc) to
+    avoid overloading your server. It will honour headers like <code>Cache-Control: max-age</code> and
+    <code>Retry-After</code> as long as they're sensible values (up to 24h).
+  </p>
+  <p>
+    Besides your feed, I occasionally request your site's icon and, once per article, the first bytes of the lead image
+    if it has no declared size.
+  </p>
+
+  <p>
+    For questions or complaints, contact me via the socials or email linked in <a href="https://guillerg.dev/about/">my
+      personal site</a>.
+  </p>
+
+  <footer>
+    Back to <a href="/">go.guillerg.dev</a>.
+  </footer>
+
+</body>
+
+</html>
